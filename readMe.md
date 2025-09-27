@@ -42,7 +42,19 @@ $$
 
 ---
 
-## Step 2: Linear regression coefficients
+## Step 2: Denominator
+
+The denominator used in slope and intercept formulas:
+
+$$
+\text{denominator} = X.dot(X) - X.mean() \cdot X.sum()
+= \sum_{i=1}^n x_i^2 - \bar{x} \sum_{i=1}^n x_i
+= \sum_{i=1}^n x_i^2 - \frac{1}{n} \Big(\sum_{i=1}^n x_i\Big)^2
+$$
+
+---
+
+## Step 3: Linear regression coefficients
 
 - **Slope \(a\)** (step-by-step):
 
@@ -58,10 +70,12 @@ $$
 
 $$
 \begin{align}
-b &= Y.mean() - a \cdot X.mean() \\
-  &= \bar{y} - a \bar{x}
+b &= \frac{Y.mean() \cdot X.dot(X) - X.mean() \cdot X.dot(Y)}{\text{denominator}} \\
+  &= \frac{\bar{y} \sum_{i=1}^n x_i^2 - \bar{x} \sum_{i=1}^n x_i y_i}{\sum_{i=1}^n x_i^2 - n \bar{x}^2}
 \end{align}
 $$
+
+> Note: This is algebraically equivalent to the simpler form $\(b = \bar{y} - a \bar{x}\$).
 
 - **Predicted value** $\(\hat{y}_i\)$ for each observation:
 
