@@ -22,13 +22,13 @@ $$
 X.dot(Y) = X \cdot Y = \sum_{i=1}^n x_i y_i
 $$
 
-- Mean of \(X\) (often written as \(\bar{x}\)):
+- Mean of \(X\) (often written as $\(\bar{x}\)$):
 
 $$
 \bar{x} = X.\text{mean()} = \frac{1}{n} \sum_{i=1}^n x_i
 $$
 
-- Mean of \(Y\) (often written as \(\bar{y}\)):
+- Mean of \(Y\) (often written as $\(\bar{y}\)$):
 
 $$
 \bar{y} = Y.\text{mean()} = \frac{1}{n} \sum_{i=1}^n y_i
@@ -40,21 +40,30 @@ $$
 X.\text{sum()} = \sum_{i=1}^n x_i
 $$
 
+---
+
 ## Step 2: Linear regression coefficients
 
-- Slope \(a\):
+- **Slope \(a\)** (step-by-step):
 
 $$
-a = \frac{\sum_{i=1}^n x_i y_i - n \bar{x} \bar{y}}{\sum_{i=1}^n x_i^2 - n \bar{x}^2}
+\begin{align}
+a &= \frac{X.dot(Y) - Y.mean() \cdot X.sum()}{X.dot(X) - X.mean() \cdot X.sum()} \\
+  &= \frac{\sum_{i=1}^n x_i y_i - \bar{y} \cdot \sum_{i=1}^n x_i}{\sum_{i=1}^n x_i^2 - \bar{x} \cdot \sum_{i=1}^n x_i} \\
+  &= \frac{\sum_{i=1}^n x_i y_i - n \bar{x} \bar{y}}{\sum_{i=1}^n x_i^2 - n \bar{x}^2}
+\end{align}
 $$
 
-- Intercept \(b\):
+- **Intercept \(b\)** (step-by-step):
 
 $$
-b = \bar{y} - a \bar{x}
+\begin{align}
+b &= Y.mean() - a \cdot X.mean() \\
+  &= \bar{y} - a \bar{x}
+\end{align}
 $$
 
-- Predicted value $\(\hat{y}_i\)$ (using "hat" notation):
+- **Predicted value** $\(\hat{y}_i\)$ for each observation:
 
 $$
 \hat{y}_i = a x_i + b
