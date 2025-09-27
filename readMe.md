@@ -54,7 +54,7 @@ $$
 b = \bar{y} - a \bar{x}
 $$
 
-- Predicted value \(\hat{y}_i\) (using "hat" notation):
+- Predicted value $\(\hat{y}_i\)$ (using "hat" notation):
 
 $$
 \hat{y}_i = a x_i + b
