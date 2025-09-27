@@ -13,13 +13,13 @@ The operations used in code can be written in summation notation as follows:
 - Dot product of \(X\) with itself:
 
 $$
-X \cdot X = \sum_{i=1}^n x_i^2
+X.dot(X) = X \cdot X = \sum_{i=1}^n x_i^2
 $$
 
 - Dot product of \(X\) and \(Y\):
 
 $$
-X \cdot Y = \sum_{i=1}^n x_i y_i
+X.dot(Y) = X \cdot Y = \sum_{i=1}^n x_i y_i
 $$
 
 - Mean of \(X\):
