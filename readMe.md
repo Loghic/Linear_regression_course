@@ -104,7 +104,7 @@ X =
 \end{bmatrix}
 $$
 
-- **Response vector** $\(Y\)$ (size $\(n \times 1\)$ ):
+- **Response vector** $\(Y\) (size \(n \times 1\)$ ):
 
 $$
 Y =
@@ -113,7 +113,7 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 \end{bmatrix}
 $$
 
-- **Coefficient vector** $\(w\)$ (size $\((p+1) \times 1\)$ ):
+- **Coefficient vector** $\(w\) (size \((p+1) \times 1\)$ ):
 
 $$
 w =
