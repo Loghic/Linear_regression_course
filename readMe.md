@@ -84,6 +84,8 @@ $$
 \hat{y}_i = a x_i + b
 $$
 
+---
+
 ## Part 2: Multiple Linear Regression (Matrix Form)
 
 ### Step 1: Data as matrices
@@ -102,7 +104,7 @@ X =
 \end{bmatrix}
 $$
 
-- **Response vector** $\(Y\) (size \(n \times 1\)$):
+- **Response vector** $\(Y\)$ (size $\(n \times 1\)$):
 
 $$
 Y =
@@ -111,7 +113,7 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 \end{bmatrix}
 $$
 
-- **Coefficient vector** $\(w\) (size \((p+1) \times 1\)$):
+- **Coefficient vector** $\(w\)$ (size $\((p+1) \times 1\)$):
 
 $$
 w =
@@ -143,9 +145,16 @@ w = np.linalg.solve(X.T @ X, X.T @ Y)
 Yhat = X @ w
 ```
 
+Alternatively:
+
+```python
+w = np.linalg.solve(np.dot(X.T, X), np.dot(X.T, Y))
+Yhat = np.dot(X, w)
+```
+
 ### Step 3: Coefficient of Determination (\(R^2\))
 
-The \(R^2\) value measures how well the multiple regression model fits the data.
+The $\(R^2\)$ value measures how well the multiple regression model fits the data.
 
 - **Residuals**:
 
