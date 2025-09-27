@@ -23,9 +23,11 @@ for line in open('data/moore.csv'):
 X = np.array(X)
 Y = np.array(Y)
 
+# display exp scatter plot
 plt.scatter(X,Y)
 plt.show()
 
+# to display linear-ish scatter plot
 Y = np.log(Y)
 plt.scatter(X,Y)
 plt.show()
