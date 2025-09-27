@@ -60,12 +60,11 @@ $$
 
 $$
 \begin{align}
-a &= \frac{X.dot(Y) - Y.mean() \cdot X.sum()}{X.dot(X) - X.mean() \cdot X.sum()} \\
-  &= \frac{\sum_{i=1}^n x_i y_i - \bar{y} \cdot \sum_{i=1}^n x_i}{\sum_{i=1}^n x_i^2 - \bar{x} \cdot \sum_{i=1}^n x_i} \\
+a &= \frac{X.dot(Y) - Y.mean() \cdot X.sum()} {\text{denominator}} \\
+  &= \frac{\sum_{i=1}^n x_i y_i - \bar{y} \sum_{i=1}^n x_i} {\sum_{i=1}^n x_i^2 - \bar{x} \sum_{i=1}^n x_i} \\
   &= \frac{\sum_{i=1}^n x_i y_i - n \bar{x} \bar{y}}{\sum_{i=1}^n x_i^2 - n \bar{x}^2}
 \end{align}
 $$
-
 - **Intercept \(b\)** (step-by-step):
 
 $$
